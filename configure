@@ -174,7 +174,7 @@ checkcc()
     rm -f tmp.c tmp.out
     echo "int main() { return 1; }" >> tmp.c
     r=1
-    $cc $ccopt tmp.c -o tmp.out >/dev/null 2>/dev/null || r=0
+    $CC $ccopt tmp.c -o tmp.out >/dev/null 2>/dev/null || r=0
     if test ! -x tmp.out; then r=0; fi
     rm -f tmp.c tmp.o tmp.out
     if test $r -eq 0; then echo "not working"; else echo "working"; fi
